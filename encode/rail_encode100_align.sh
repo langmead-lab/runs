@@ -7,16 +7,18 @@ REGION="us-east-1"
 BUCKET="langmead-encode100-2017"
 NM="encode100"
 MANIFEST="s3://${BUCKET}/${NM}/manifest/${NM}.manifest"
+PREPROC="s3://${BUCKET}/${NM}/preproc"
+KEYPAIR_NAME="default"
 
-python $HOME/raildotbio/rail-rna prep elastic \
+python $HOME/git/rail/src align elastic \
     -m ${MANIFEST} \
-    -o s3://${BUCKET}/${NM}/preproc \
+    -i s3://${BUCKET}/${NM}/preproc \
+    --intermediate s3://${BUCKET}/${NM}/intermediate \
+    -o s3://${BUCKET}/${NM}/output \
+    -a hg38 \
+    --drop-deletions \
     --region ${REGION} \
     ${INSTANCES} \
-    -c 5
-
-#python $HOME/raildotbio/rail-rna prep elastic \
-#    -a hg38 \
-#    -o s3://${BUCKET}/output/encode100 \
-#    --region ${REGION} \
-#    -c 5 \
+    -c 3 \
+    --ec2-key-name "${KEYPAIR_NAME}" \
+    --name "Encode 100 align"
