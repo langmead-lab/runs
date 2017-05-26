@@ -1,0 +1,95 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1033783/SRR1033783_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1033783/SRR1033783_2.fastq.gz	0	SRP033200-Astrocyte-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1033784/SRR1033784_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1033784/SRR1033784_2.fastq.gz	0	SRP033200-Astrocyte-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1033785/SRR1033785_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1033785/SRR1033785_2.fastq.gz	0	SRP033200-Neuron-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1033786/SRR1033786_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1033786/SRR1033786_2.fastq.gz	0	SRP033200-Neuron-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1033787/SRR1033787_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1033787/SRR1033787_2.fastq.gz	0	SRP033200-OligodendrocytePrecursorCells-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1033788/SRR1033788_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1033788/SRR1033788_2.fastq.gz	0	SRP033200-OligodendrocytePrecursorCells-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1033789/SRR1033789_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1033789/SRR1033789_2.fastq.gz	0	SRP033200-NewlyFormedOligodendrocytes-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1033790/SRR1033790_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1033790/SRR1033790_2.fastq.gz	0	SRP033200-NewlyFormedOligodendrocytes-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1033791/SRR1033791_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1033791/SRR1033791_2.fastq.gz	0	SRP033200-MyelinatingOligodendrocytes-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1033792/SRR1033792_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1033792/SRR1033792_2.fastq.gz	0	SRP033200-MyelinatingOligodendrocytes-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1033793/SRR1033793_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1033793/SRR1033793_2.fastq.gz	0	SRP033200-Microglia-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1033794/SRR1033794_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1033794/SRR1033794_2.fastq.gz	0	SRP033200-Microglia-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1033795/SRR1033795_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1033795/SRR1033795_2.fastq.gz	0	SRP033200-EndothelialCells-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1033796/SRR1033796_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1033796/SRR1033796_2.fastq.gz	0	SRP033200-EndothelialCells-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1033797/SRR1033797_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1033797/SRR1033797_2.fastq.gz	0	SRP033200-MixedWholeCortex-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1033798/SRR1033798_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1033798/SRR1033798_2.fastq.gz	0	SRP033200-MixedWholeCortex-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1033799/SRR1033799_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1033799/SRR1033799_2.fastq.gz	0	SRP033200-MixedWholeCortex-3
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR500/000/SRR5001020/SRR5001020_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR500/000/SRR5001020/SRR5001020_2.fastq.gz	0	SRP092781-EmbryonicMotorNeurons-1
+sra:SRR5001021	0	SRP092781-EmbryonicMotorNeurons-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/007/SRR2971427/SRR2971427_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/007/SRR2971427/SRR2971427_2.fastq.gz	0	SRP066961-EmbryonicMotorNeurons-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/000/SRR2971430/SRR2971430_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/000/SRR2971430/SRR2971430_2.fastq.gz	0	SRP066961-EmbryonicMotorNeurons-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/001/SRR2971431/SRR2971431_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/001/SRR2971431/SRR2971431_2.fastq.gz	0	SRP066961-EmbryonicMotorNeurons-3
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/002/SRR2971432/SRR2971432_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/002/SRR2971432/SRR2971432_2.fastq.gz	0	SRP066961-EmbryonicMotorNeurons-4
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/003/SRR2971433/SRR2971433_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR297/003/SRR2971433/SRR2971433_2.fastq.gz	0	SRP066961-FloorPlateGlialCells-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873293/ERR873293_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873293/ERR873293_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-1a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873294/ERR873294_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873294/ERR873294_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-1b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873295/ERR873295_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873295/ERR873295_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-2a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873296/ERR873296_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873296/ERR873296_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-2b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873297/ERR873297_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873297/ERR873297_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-3a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873298/ERR873298_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873298/ERR873298_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-1-3b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873299/ERR873299_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873299/ERR873299_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-1a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873300/ERR873300_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873300/ERR873300_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-1b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873301/ERR873301_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873301/ERR873301_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-2a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873302/ERR873302_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873302/ERR873302_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-2b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873303/ERR873303_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873303/ERR873303_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-3a
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873304/ERR873304_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR873/ERR873304/ERR873304_2.fastq.gz	0	ERP009139-OlfactorySensoryNeurons-2-3b
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR106/002/SRR1068222/SRR1068222_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR106/002/SRR1068222/SRR1068222_2.fastq.gz	0	SRP034891-OlfactoryEpithelium-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR106/005/SRR1068225/SRR1068225_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR106/005/SRR1068225/SRR1068225_2.fastq.gz	0	SRP034891-OlfactorySensoryNeurons-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/002/SRR1782642/SRR1782642_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/002/SRR1782642/SRR1782642_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/003/SRR1782643/SRR1782643_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/003/SRR1782643/SRR1782643_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/001/SRR1782651/SRR1782651_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/001/SRR1782651/SRR1782651_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-3
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/002/SRR1782652/SRR1782652_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/002/SRR1782652/SRR1782652_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-4
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/000/SRR1782660/SRR1782660_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/000/SRR1782660/SRR1782660_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-5
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/001/SRR1782661/SRR1782661_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/001/SRR1782661/SRR1782661_2.fastq.gz	0	SRP053008-ProliferatingNeuronalProgenitors-6
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/005/SRR1782645/SRR1782645_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/005/SRR1782645/SRR1782645_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/006/SRR1782646/SRR1782646_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/006/SRR1782646/SRR1782646_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/004/SRR1782654/SRR1782654_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/004/SRR1782654/SRR1782654_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-3
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/005/SRR1782655/SRR1782655_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/005/SRR1782655/SRR1782655_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-4
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/003/SRR1782663/SRR1782663_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/003/SRR1782663/SRR1782663_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-5
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/004/SRR1782664/SRR1782664_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/004/SRR1782664/SRR1782664_2.fastq.gz	0	SRP053008-DifferentiatingNeuronalProgenitors-6
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/008/SRR1782648/SRR1782648_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/008/SRR1782648/SRR1782648_2.fastq.gz	0	SRP053008-NewbornNeurons-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/009/SRR1782649/SRR1782649_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/009/SRR1782649/SRR1782649_2.fastq.gz	0	SRP053008-NewbornNeurons-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/007/SRR1782657/SRR1782657_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/007/SRR1782657/SRR1782657_2.fastq.gz	0	SRP053008-NewbornNeurons-3
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/008/SRR1782658/SRR1782658_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/008/SRR1782658/SRR1782658_2.fastq.gz	0	SRP053008-NewbornNeurons-4
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/006/SRR1782666/SRR1782666_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/006/SRR1782666/SRR1782666_2.fastq.gz	0	SRP053008-NewbornNeurons-5
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/007/SRR1782667/SRR1782667_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR178/007/SRR1782667/SRR1782667_2.fastq.gz	0	SRP053008-NewbornNeurons-6
+sra:SRR3212810	0	SRP071321-PurkinjeCells-1
+sra:SRR3212811	0	SRP071321-PurkinjeCells-2
+sra:SRR3212812	0	SRP071321-PurkinjeCells-3
+sra:SRR3212813	0	SRP071321-PurkinjeCells-4
+sra:SRR3212816	0	SRP071321-PurkinjeCells-5
+sra:SRR3212817	0	SRP071321-PurkinjeCells-6
+sra:SRR3212818	0	SRP071321-PurkinjeCells-7
+sra:SRR3212819	0	SRP071321-PurkinjeCells-8
+sra:SRR3212820	0	SRP071321-PurkinjeCells-9
+sra:SRR3212821	0	SRP071321-PurkinjeCells-10
+sra:SRR3212804	0	SRP071321-PurkinjeCells-11
+sra:SRR3212805	0	SRP071321-PurkinjeCells-12
+sra:SRR3212806	0	SRP071321-PurkinjeCells-13
+sra:SRR3212807	0	SRP071321-PurkinjeCells-14
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR321/008/SRR3212808/SRR3212808_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR321/008/SRR3212808/SRR3212808_2.fastq.gz	0	SRP071321-PurkinjeCells-15
+sra:SRR3212809	0	SRP071321-PurkinjeCells-16
+sra:SRR3212814	0	SRP071321-PurkinjeCells-17
+sra:SRR3212815	0	SRP071321-PurkinjeCells-18
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579545/SRR579545_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579545/SRR579545_2.fastq.gz	0	SRP015997-Brain-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579546/SRR579546_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579546/SRR579546_2.fastq.gz	0	SRP015997-Brain-2
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579547/SRR579547_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579547/SRR579547_2.fastq.gz	0	SRP015997-Liver-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579548/SRR579548_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579548/SRR579548_2.fastq.gz	0	SRP015997-Kidney-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579549/SRR579549_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579549/SRR579549_2.fastq.gz	0	SRP015997-Heart-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579550/SRR579550_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR579/SRR579550/SRR579550_2.fastq.gz	0	SRP015997-SkeletalMuscle-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594393/SRR594393_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594393/SRR594393_2.fastq.gz	0	SRP016501-DBA2J-Brain-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594394/SRR594394_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594394/SRR594394_2.fastq.gz	0	SRP016501-DBA2J-Colon-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594396/SRR594396_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594396/SRR594396_2.fastq.gz	0	SRP016501-DBA2J-Kidney-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594397/SRR594397_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594397/SRR594397_2.fastq.gz	0	SRP016501-DBA2J-Liver-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594399/SRR594399_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594399/SRR594399_2.fastq.gz	0	SRP016501-DBA2J-SkeletalMuscle-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594400/SRR594400_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594400/SRR594400_2.fastq.gz	0	SRP016501-DBA2J-Spleen-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594401/SRR594401_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594401/SRR594401_2.fastq.gz	0	SRP016501-DBA2J-Testes-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594402/SRR594402_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594402/SRR594402_2.fastq.gz	0	SRP016501-C57BL6-Brain-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594403/SRR594403_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594403/SRR594403_2.fastq.gz	0	SRP016501-C57BL6-Colon-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594404/SRR594404_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594404/SRR594404_2.fastq.gz	0	SRP016501-C57BL6-Kidney-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594405/SRR594405_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594405/SRR594405_2.fastq.gz	0	SRP016501-C57BL6-Liver-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594406/SRR594406_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594406/SRR594406_2.fastq.gz	0	SRP016501-C57BL6-Lung-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594407/SRR594407_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594407/SRR594407_2.fastq.gz	0	SRP016501-C57BL6-SkeletalMuscle-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594408/SRR594408_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594408/SRR594408_2.fastq.gz	0	SRP016501-C57BL6-Spleen-1
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594409/SRR594409_1.fastq.gz	0	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR594/SRR594409/SRR594409_2.fastq.gz	0	SRP016501-C57BL6-Testes-1
