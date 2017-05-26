@@ -12,23 +12,26 @@ MANIFEST="s3://${BUCKET}/${NM}/manifest/${NM}.manifest"
 PREPROC="s3://${BUCKET}/${NM}/preproc"
 KEYPAIR_NAME="default"
 PID_ARGS="--thread-ceiling 32"
-NWORKERS=1
+NWORKERS=10
 
 aws s3 cp "${NM}.manifest" "${MANIFEST}"
+
+# This doesn't seem ready for prime time yet
+#    --genome-bowtie1-args "${PID_ARGS} --thread-piddir /tmp/genome-bowtie1-pid-tmp" \
+#    --transcriptome-bowtie2-args "${PID_ARGS} --thread-piddir /tmp/transcriptome-bowtie2-pid-tmp" \
+#    --bowtie2-args "${PID_ARGS} --thread-piddir /tmp/bowtie2-pid-tmp" \
 
 python $HOME/git/rail/src align elastic \
     -m ${MANIFEST} \
     -i s3://${BUCKET}/${NM}/preproc \
     --intermediate s3://${BUCKET}/${NM}/intermediate \
-    -o s3://${BUCKET}/${NM}/output2 \
+    -o s3://${BUCKET}/${NM}/output \
     -a mm10 \
     --drop-deletions \
     --region ${REGION} \
     ${INSTANCES} \
     -c ${NWORKERS} \
     --ec2-key-name "${KEYPAIR_NAME}" \
-    --genome-bowtie1-args "${PID_ARGS} --thread-piddir /tmp/genome-bowtie1-pid-tmp" \
-    --transcriptome-bowtie2-args "${PID_ARGS} --thread-piddir /tmp/transcriptome-bowtie2-pid-tmp" \
-    --bowtie2-args "${PID_ARGS} --thread-piddir /tmp/bowtie2-pid-tmp" \
+    --intermediate-lifetime -1 \
     --name "MouseLing25 align" \
     $*
