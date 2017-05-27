@@ -8,10 +8,10 @@ INSTANCES="--core-instance-bid-price ${PRICE} --core-instance-type ${INSTANCE_TY
 REGION="us-east-1"
 BUCKET="langmead-mouseling-2017"
 NM="mouseling"
-MANIFEST="s3://${BUCKET}/${NM}/manifest/${NM}.manifest"
+MANIFEST="s3://${BUCKET}/${NM}/manifest/${NM}_hybrid.manifest"
 KEYPAIR_NAME="default"
 
-aws s3 cp "${NM}.manifest" "${MANIFEST}"
+aws s3 cp "${NM}_hybrid.manifest" "${MANIFEST}"
 
 python $HOME/git/rail/src prep elastic \
     -m ${MANIFEST} \
@@ -19,4 +19,4 @@ python $HOME/git/rail/src prep elastic \
     --region ${REGION} \
     ${INSTANCES} \
     --ec2-key-name "${KEYPAIR_NAME}" \
-    -c 5
+    -c 2
