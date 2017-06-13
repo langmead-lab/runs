@@ -11,8 +11,10 @@ NM="encode15"
 MANIFEST="s3://${BUCKET}/${NM}/manifest/${NM}.manifest"
 PREPROC="s3://${BUCKET}/${NM}/preproc"
 KEYPAIR_NAME="default"
+PID_ARGS="--thread-ceiling 32"
+NWORKERS=3
 
-python $HOME/git/rail/src align elastic \
+python $HOME/git/rail-langmead/src align elastic \
     -m ${MANIFEST} \
     -i s3://${BUCKET}/${NM}/preproc \
     --intermediate s3://${BUCKET}/${NM}/intermediate \
@@ -21,6 +23,10 @@ python $HOME/git/rail/src align elastic \
     --drop-deletions \
     --region ${REGION} \
     ${INSTANCES} \
-    -c 3 \
+    -c ${NWORKERS} \
     --ec2-key-name "${KEYPAIR_NAME}" \
-    --name "Encode 15 align"
+    --intermediate-lifetime -1 \
+    --name "Encode 15 align" \
+    --transcriptome-bowtie2-args "${PID_ARGS} --thread-piddir /tmp/transcriptome-bowtie2-pid-tmp" \
+    --bowtie2-args "${PID_ARGS} --thread-piddir /tmp/bowtie2-pid-tmp" \
+    $*
