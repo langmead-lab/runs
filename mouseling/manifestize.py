@@ -31,9 +31,25 @@ import requests
 
 query = []
 
-def url_exists(url):
-    #print('Checking: ' + url, file=sys.stderr)
-    return os.system('curl -I ' + url + ' >/dev/null 2>/dev/null') == 0
+def url_exists(url_dir, verbose=False):
+    cmd = "curl " + url_dir + "/ 2>/dev/null | awk '{print $NF}' >.tmp.txt"
+    if verbose:
+        print(cmd, file=sys.stderr)
+    ret = os.system(cmd)
+    if ret != 0:
+        return []
+    rec = [None, None, None]
+    with open('.tmp.txt') as fh:
+        for ln in fh:
+            ln = ln.rstrip()
+            if ln.endswith('_1.fastq.gz'):
+                rec[1] = url_dir + '/' + ln
+            elif ln.endswith('_2.fastq.gz'):
+                rec[2] = url_dir + '/' + ln
+            else:
+                assert ln.endswith('.fastq.gz')
+                rec[0] = url_dir + '/' + ln
+    return rec
 
 
 for ln in sys.stdin:
@@ -46,11 +62,16 @@ for ln in sys.stdin:
     srr_pre = srr[:6]
     if len(srr) == 10:
         srr00 = '00' + srr[-1]
-        url = 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/%s/%s/%s/%s' % (srr_pre, srr00, srr, srr)
+        url = 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/%s/%s/%s' % (srr_pre, srr00, srr)
     else:
-        url = 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/%s/%s/%s' % (srr_pre, srr, srr)
-    if url_exists(url + '_1.fastq.gz'):
-        print('\t'.join([url + '_1.fastq.gz', '0', url + '_2.fastq.gz', '0', toks[-1]]))
+        url = 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/%s/%s' % (srr_pre, srr)
+    rec = url_exists(url)
+    if len(rec) > 0 and (rec[0] is not None or rec[1] is not None):
+        if rec[1] is not None:
+            assert rec[2] is not None
+            print('\t'.join([rec[1], '0', rec[2], '0', toks[-1]]))
+        else:
+            print('\t'.join([rec[0], '0', toks[-1]]))
     else:
         print('\t'.join(['sra:' + srr, '0', toks[-1]]))
 
@@ -58,7 +79,7 @@ batch_size = 50
 
 i = 0
 sra_url = 'https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi'
-while i < len(sra_url):
+while i < len(query):
     cmd = "curl -s '%s?save=efetch&db=sra&rettype=runinfo&term=%s'" % (sra_url, '|'.join(query[i*batch_size:min((i+1)*batch_size, len(sra_url))]))
     o, e = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
     print(o, file=sys.stderr)
