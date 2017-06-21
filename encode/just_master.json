@@ -1,0 +1,133 @@
+{
+    "AmiVersion": "3.11.0",
+    "BootstrapActions": [
+        {
+            "Name": "Install S3cmd",
+            "ScriptBootstrapAction": {
+                "Args": [],
+                "Path": "s3://langmead-encode100-2017/encode15/output.dependencies/install-s3cmd.sh"
+            }
+        },
+        {
+            "Name": "Install Rail-RNA and create JAR dependencies",
+            "ScriptBootstrapAction": {
+                "Args": [
+                    "s3://langmead-encode100-2017/encode15/output.dependencies/rail-rna.zip",
+                    "/mnt/lib",
+                    "-y",
+                    "-s"
+                ],
+                "Path": "s3://langmead-encode100-2017/encode15/output.dependencies/install-rail.sh"
+            }
+        },
+        {
+            "Name": "Transfer Bowtie indexes to nodes",
+            "ScriptBootstrapAction": {
+                "Args": [
+                    "/mnt/space",
+                    "s3://rail-emr-requester-pays/index/hg38.tar.gz"
+                ],
+                "Path": "s3://langmead-encode100-2017/encode15/output.dependencies/install-index.sh"
+            }
+        },
+        {
+            "Name": "Transfer manifest file to nodes",
+            "ScriptBootstrapAction": {
+                "Args": [
+                    "s3://langmead-encode100-2017/encode15/manifest/encode15.manifest",
+                    "/mnt/space",
+                    "MANIFEST"
+                ],
+                "Path": "s3://langmead-encode100-2017/encode15/output.dependencies/s3cmd_s3.sh"
+            }
+        },
+        {
+            "Name": "Allocate swap space",
+            "ScriptBootstrapAction": {
+                "Args": [
+                    "3840",
+                    "/mnt/space/swapfile"
+                ],
+                "Path": "s3://elasticmapreduce/bootstrap-actions/add-swap"
+            }
+        },
+        {
+            "Name": "Configure Hadoop",
+            "ScriptBootstrapAction": {
+                "Args": [
+                    "-c",
+                    "fs.s3n.multipart.uploads.enabled=true",
+                    "-y",
+                    "yarn.nodemanager.pmem-check-enabled=false",
+                    "-y",
+                    "yarn.nodemanager.vmem-check-enabled=false",
+                    "-y",
+                    "yarn.nodemanager.resource.memory-mb=53248",
+                    "-y",
+                    "yarn.scheduler.minimum-allocation-mb=1664",
+                    "-y",
+                    "yarn.nodemanager.vmem-pmem-ratio=2.1",
+                    "-y",
+                    "yarn.nodemanager.container-manager.thread-count=1",
+                    "-y",
+                    "yarn.nodemanager.localizer.fetch.thread-count=1",
+                    "-m",
+                    "mapreduce.map.speculative=true",
+                    "-m",
+                    "mapreduce.reduce.speculative=true",
+                    "-m",
+                    "mapreduce.task.timeout=1800000",
+                    "-m",
+                    "mapreduce.map.memory.mb=1664",
+                    "-m",
+                    "mapreduce.reduce.memory.mb=1664",
+                    "-m",
+                    "mapreduce.map.java.opts=-Xmx1331m",
+                    "-m",
+                    "mapreduce.reduce.java.opts=-Xmx1331m",
+                    "-m",
+                    "mapreduce.map.cpu.vcores=1",
+                    "-m",
+                    "mapreduce.reduce.cpu.vcores=1",
+                    "-m",
+                    "mapred.output.compress=true",
+                    "-m",
+                    "mapreduce.reduce.maxattempts=4",
+                    "-m",
+                    "mapreduce.map.maxattempts=4",
+                    "-m",
+                    "mapreduce.job.maps=32",
+                    "-e",
+                    "fs.s3.enableServerSideEncryption=true",
+                    "-e",
+                    "fs.s3.consistent=false"
+                ],
+                "Path": "s3://us-east-1.elasticmapreduce/bootstrap-actions/configure-hadoop"
+            }
+        }
+    ],
+    "Instances": {
+        "Ec2KeyName": "default",
+        "HadoopVersion": "2.4.0",
+        "InstanceGroups": [
+            {
+                "BidPrice": "0.320",
+                "InstanceCount": 1,
+                "InstanceRole": "MASTER",
+                "InstanceType": "cc2.8xlarge",
+                "Market": "SPOT",
+                "Name": "Master Instance Group"
+            }
+        ],
+        "KeepJobFlowAliveWhenNoSteps": "true",
+        "TerminationProtected": "true"
+    },
+    "JobFlowRole": "EMR_EC2_DefaultRole",
+    "LogUri": "s3://langmead-encode100-2017/just-master",
+    "Name": "Just master",
+    "NewSupportedProducts": [],
+    "ServiceRole": "EMR_DefaultRole",
+    "Steps": [],
+    "Tags": [],
+    "VisibleToAllUsers": "false"
+}
