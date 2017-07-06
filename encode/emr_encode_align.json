@@ -107,9 +107,9 @@
         }
     ],
     "Instances": {
-        "Ec2KeyName": "default",
+        "Ec2KeyName": "encode-20170630",
         "Ec2SubnetIds": [
-            "subnet-96ef5d9a"
+            "subnet-4f734e73"
         ],
         "HadoopVersion": "2.4.0",
         "InstanceGroups": [
