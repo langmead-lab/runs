@@ -64,7 +64,7 @@
                     "-y",
                     "yarn.nodemanager.resource.memory-mb=53248",
                     "-y",
-                    "yarn.scheduler.minimum-allocation-mb=1664",
+                    "yarn.scheduler.minimum-allocation-mb=1479",
                     "-y",
                     "yarn.nodemanager.vmem-pmem-ratio=2.1",
                     "-y",
@@ -78,13 +78,13 @@
                     "-m",
                     "mapreduce.task.timeout=1800000",
                     "-m",
-                    "mapreduce.map.memory.mb=1664",
+                    "mapreduce.map.memory.mb=1479",
                     "-m",
-                    "mapreduce.reduce.memory.mb=1664",
+                    "mapreduce.reduce.memory.mb=1479",
                     "-m",
-                    "mapreduce.map.java.opts=-Xmx1331m",
+                    "mapreduce.map.java.opts=-Xmx1183m",
                     "-m",
-                    "mapreduce.reduce.java.opts=-Xmx1331m",
+                    "mapreduce.reduce.java.opts=-Xmx1183m",
                     "-m",
                     "mapreduce.map.cpu.vcores=1",
                     "-m",
@@ -96,7 +96,7 @@
                     "-m",
                     "mapreduce.map.maxattempts=6",
                     "-m",
-                    "mapreduce.job.maps=2048",
+                    "mapreduce.job.maps=2304",
                     "-e",
                     "fs.s3.enableServerSideEncryption=true",
                     "-e",
@@ -107,22 +107,49 @@
         }
     ],
     "Instances": {
-        "Ec2KeyName": "default",
+        "Ec2KeyName": "encode-20170630",
+        "Ec2SubnetIds": [
+            "subnet-4f734e73"
+        ],
         "HadoopVersion": "2.4.0",
         "InstanceGroups": [
             {
-                "BidPrice": "2.100",
+                "BidPrice": "0.500",
+                "EbsConfiguration": {
+                    "EbsBlockDeviceConfigs": [
+                        {
+                            "VolumeSpecification": {
+                                "SizeInGB": 250,
+                                "VolumeType": "gp2"
+                            },
+                            "VolumesPerInstance": 6
+                        }
+                    ],
+                    "EbsOptimized": true
+                },
                 "InstanceCount": 1,
                 "InstanceRole": "MASTER",
-                "InstanceType": "cc2.8xlarge",
+                "InstanceType": "c4.8xlarge",
                 "Market": "SPOT",
                 "Name": "Master Instance Group"
             },
             {
-                "BidPrice": "0.350",
+                "BidPrice": "0.500",
+                "EbsConfiguration": {
+                    "EbsBlockDeviceConfigs": [
+                        {
+                            "VolumeSpecification": {
+                                "SizeInGB": 250,
+                                "VolumeType": "gp2"
+                            },
+                            "VolumesPerInstance": 6
+                        }
+                    ],
+                    "EbsOptimized": true
+                },
                 "InstanceCount": 64,
                 "InstanceRole": "CORE",
-                "InstanceType": "cc2.8xlarge",
+                "InstanceType": "c4.8xlarge",
                 "Market": "SPOT",
                 "Name": "Core Instance Group"
             }
@@ -132,7 +159,7 @@
     },
     "JobFlowRole": "EMR_EC2_DefaultRole",
     "LogUri": "s3://langmead-encode-2017/encode_1159/output.logs",
-    "Name": "ENCODE align",
+    "Name": "ENCODE full align",
     "NewSupportedProducts": [],
     "ServiceRole": "EMR_DefaultRole",
     "Steps": [
@@ -151,7 +178,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=4096",
+                    "mapreduce.job.reduces=4608",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -165,11 +192,11 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-D",
-                    "mapreduce.reduce.memory.mb=6656",
+                    "mapreduce.reduce.memory.mb=5916",
                     "-D",
-                    "mapreduce.reduce.java.opts=-Xmx2662m",
+                    "mapreduce.reduce.java.opts=-Xmx2366m",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -214,7 +241,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=4096",
+                    "mapreduce.job.reduces=4608",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -228,7 +255,7 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -255,7 +282,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=4096",
+                    "mapreduce.job.reduces=4608",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -269,7 +296,7 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -296,7 +323,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -310,7 +337,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -337,7 +364,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=4",
                     "-D",
@@ -355,7 +382,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -382,7 +409,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -396,7 +423,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -441,7 +468,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -468,7 +495,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=12288",
+                    "mapreduce.job.reduces=13824",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -482,7 +509,7 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-archives",
@@ -511,7 +538,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=12288",
+                    "mapreduce.job.reduces=13824",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -525,7 +552,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -552,7 +579,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=14336",
+                    "mapreduce.job.reduces=16128",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -570,7 +597,7 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar,/mnt/lib/mod-partitioner.jar",
                     "-partitioner",
@@ -597,7 +624,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=14336",
+                    "mapreduce.job.reduces=16128",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -611,11 +638,11 @@
                     "-D",
                     "elephantbird.combine.split.size=536870912",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-D",
-                    "mapreduce.reduce.memory.mb=3328",
+                    "mapreduce.reduce.memory.mb=2958",
                     "-D",
-                    "mapreduce.reduce.java.opts=-Xmx2662m",
+                    "mapreduce.reduce.java.opts=-Xmx2366m",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -642,7 +669,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=7",
                     "-D",
@@ -660,7 +687,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -687,7 +714,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=1",
                     "-D",
@@ -701,7 +728,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -728,7 +755,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -750,7 +777,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar,/mnt/lib/mod-partitioner.jar",
                     "-partitioner",
@@ -795,7 +822,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -822,7 +849,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=14336",
+                    "mapreduce.job.reduces=16128",
                     "-D",
                     "stream.num.map.output.key.fields=4",
                     "-D",
@@ -836,7 +863,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -863,7 +890,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=14336",
+                    "mapreduce.job.reduces=16128",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -881,7 +908,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-files",
@@ -910,7 +937,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=3",
                     "-D",
@@ -928,7 +955,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar,/mnt/lib/mod-partitioner.jar",
                     "-partitioner",
@@ -955,7 +982,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=14336",
+                    "mapreduce.job.reduces=16128",
                     "-D",
                     "stream.num.map.output.key.fields=6",
                     "-D",
@@ -973,7 +1000,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
@@ -1000,7 +1027,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=5",
                     "-D",
@@ -1018,7 +1045,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar,/mnt/lib/mod-partitioner.jar",
                     "-partitioner",
@@ -1045,7 +1072,7 @@
             "HadoopJarStep": {
                 "Args": [
                     "-D",
-                    "mapreduce.job.reduces=2048",
+                    "mapreduce.job.reduces=2304",
                     "-D",
                     "stream.num.map.output.key.fields=5",
                     "-D",
@@ -1063,7 +1090,7 @@
                     "-D",
                     "elephantbird.combine.split.size=268435456",
                     "-D",
-                    "elephantbird.combined.split.count=2048",
+                    "elephantbird.combined.split.count=2304",
                     "-libjars",
                     "/mnt/lib/relevant-elephant.jar,/mnt/lib/custom-output-formats.jar",
                     "-partitioner",
