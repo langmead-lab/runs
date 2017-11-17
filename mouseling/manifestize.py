@@ -80,7 +80,12 @@ batch_size = 50
 i = 0
 sra_url = 'https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi'
 while i < len(query):
-    cmd = "curl -s '%s?save=efetch&db=sra&rettype=runinfo&term=%s'" % (sra_url, '|'.join(query[i*batch_size:min((i+1)*batch_size, len(sra_url))]))
+    #keep header if first pass chunk
+    if i == 0:
+        cmd = "curl -s '%s?save=efetch&db=sra&rettype=runinfo&term=%s' | grep -v -e '^$'" % (sra_url, '|'.join(query[i:i+batch_size]))
+    #dump header and any empty lines for 2nd* chunks
+    else:
+        cmd = "curl -s '%s?save=efetch&db=sra&rettype=runinfo&term=%s' | grep -v -e 'Run,ReleaseDate,LoadDate,spots,bases' | grep -v -e '^$'" % (sra_url, '|'.join(query[i:i+batch_size]))
     o, e = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
-    print(o, file=sys.stderr)
+    sys.stderr.write(o)
     i += batch_size
