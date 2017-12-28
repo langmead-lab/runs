@@ -15,7 +15,7 @@ INSTANCES="${INSTANCES} --master-instance-bid-price ${PRICE} --master-instance-t
 
 # Instance counts
 INSTANCES="${INSTANCES} --master-instance-count 1"
-INSTANCES="${INSTANCES} --core-instance-count 5"
+INSTANCES="${INSTANCES} --core-instance-count 20"
 INSTANCES="${INSTANCES} --task-instance-count 0"
 
 # Other EC2 config -- using CC1 account
@@ -41,23 +41,29 @@ BUCKET="langmeadlab-public-allen"
 MANIFEST="s3://${BUCKET}/${LNM}/manifest/${NM}.manifest"
 PREPROC="s3://${BUCKET}/${LNM}/preproc"
 KEYPAIR_NAME="abmv1"
+PID_ARGS="--thread-ceiling 30"
 
 if ! ${AWS} s3api head-object --bucket ${BUCKET} --key "${LNM}/manifest/${NM}.manifest" 2>/dev/null ; then
-	echo "Copying manifest"
-	${AWS} s3 cp --region ${REGION} "${LNM}.manifest" "${MANIFEST}"
+    ${AWS} s3 cp "${LNM}.manifest" "${MANIFEST}"
 fi
 
-python $HOME/git/rail-langmead/src prep elastic \
+python $HOME/git/rail-langmead/src align elastic \
     --profile ${PROFILE} \
     -m ${MANIFEST} \
-    -o ${PREPROC} \
+    -i ${PREPROC} \
+    --intermediate s3://${BUCKET}/${LNM}/intermediate2 \
+    -o s3://${BUCKET}/${LNM}/output_dummy \
+    -a mm10 \
+    --drop-deletions \
     --region ${REGION} \
     ${INSTANCES} \
     ${EC2_CONFIG} \
     ${EBS_CONFIG} \
-    --name "Allen preproc" \
-    --skip-bad-records \
     --ec2-key-name "${KEYPAIR_NAME}" \
+    -d idx,tsv,bed,bw,jx \
+    --name "Allen align 10" \
+    --transcriptome-bowtie2-args "${PID_ARGS} --thread-piddir /tmp/transcriptome-bowtie2-pid-tmp" \
+    --bowtie2-args "${PID_ARGS} --thread-piddir /tmp/bowtie2-pid-tmp" \
     --visible-to-all-users \
     --emr-debug \
     $*
