@@ -44,7 +44,7 @@ KEYPAIR_NAME="ct1"
 
 if ! ${AWS} s3api head-object --bucket ${BUCKET} --key "${LNM}/manifest/${NM}.manifest" 2>/dev/null ; then
 	echo "Copying manifest"
-	${AWS} s3 cp --region ${REGION} "${LNM}.manifest" "${MANIFEST}"
+	${AWS} s3 cp --region ${REGION} "${NM}.manifest" "${MANIFEST}"
 fi
 
 python $HOME/git/rail-langmead/src prep elastic \
